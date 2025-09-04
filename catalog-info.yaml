@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: node-jenkins-quay-katka-17-gitops
+  description: This is GitOps manifest for node-jenkins-quay-katka-17   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=node-jenkins-quay-katka-17
+    backstage.io/kubernetes-id: node-jenkins-quay-katka-17 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: node-jenkins-quay-katka-17-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:node-jenkins-quay-katka-17
