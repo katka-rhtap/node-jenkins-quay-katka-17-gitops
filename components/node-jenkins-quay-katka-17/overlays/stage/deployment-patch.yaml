@@ -12,5 +12,5 @@ spec:
   template: 
     spec:
       containers:
-      - image: quay.io/redhat-tssc/task-runner:1.7
+      - image: quay.io/tsscui/katka-rhtap-release-test:jenkins-0332e1448c45697dfa94601e7fb829add114c605
         name: container-image  
